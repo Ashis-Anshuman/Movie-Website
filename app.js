@@ -1,6 +1,11 @@
 const arrows = document.querySelectorAll(".arrow");
 const movieLists = document.querySelectorAll(".movie-list");
 
+const scroll = new LocomotiveScroll({
+  el: document.querySelector('#mov'),
+  smooth: true
+});
+
 arrows.forEach((arrow, i) => {
   const itemNumber = movieLists[i].querySelectorAll("img").length;
   let clickCounter = 0;

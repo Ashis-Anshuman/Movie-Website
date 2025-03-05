@@ -3,6 +3,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
     <link rel="stylesheet" href="style.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Sen:wght@400;700;800&display=swap"
@@ -12,289 +13,291 @@
 </head>
 
 <body>
-
-    <div class="navbar">
-        <div class="navbar-container">
-            <div class="logo-container">
-                <h1 class="logo">Movies World</h1>
-            </div>
-            <div class="menu-container">
-                <ul class="menu-list">
-                    <li class="menu-list-item active"><a href="./index.html">Home</a></li>
-                    <li class="menu-list-item"><a href="#Movies">Movies</a></li>
-                    <li class="menu-list-item"><a href="#web-series">Series</a></li>
-                    <li class="menu-list-item"><a href="#">Popular</a></li>
-                    <li class="menu-list-item"><a href="#">Trends</a></li>
-
-                </ul>
-            </div>
-            <div class="search-container">
-                <input type="text" id="searchInput" placeholder="Search...">
-                <button id="searchButton"><i class="fas fa-search"></i></button>
-            </div>
-            <div class="profile-container">
-                <img class="profile-picture" src="img/profile.jpg" alt="">
-                <div class="profile-text-container">
-                    <span class="profile-text">Profile</span>
-                    <i class="fas fa-caret-down"></i>
+    <div id="mov">
+        <div class="navbar">
+            <div class="navbar-container">
+                <div class="logo-container">
+                    <h1 class="logo">Movies World</h1>
                 </div>
-                <div class="toggle">
-                    <i class="fas fa-moon toggle-icon"></i>
-                    <i class="fas fa-sun toggle-icon"></i>
-                    <div class="toggle-ball"></div>
+                <div class="menu-container">
+                    <ul class="menu-list">
+                        <li class="menu-list-item active"><a href="./index.html">Home</a></li>
+                        <li class="menu-list-item"><a href="#Movies">Movies</a></li>
+                        <li class="menu-list-item"><a href="#web-series">Series</a></li>
+                        <li class="menu-list-item"><a href="#">Popular</a></li>
+                        <li class="menu-list-item"><a href="#">Trends</a></li>
+
+                    </ul>
+                </div>
+                <div class="search-container">
+                    <input type="text" id="searchInput" placeholder="Search...">
+                    <button id="searchButton"><i class="fas fa-search"></i></button>
+                </div>
+                <div class="profile-container">
+                    <img class="profile-picture" src="img/profile.jpg" alt="">
+                    <div class="profile-text-container">
+                        <span class="profile-text">Profile</span>
+                        <i class="fas fa-caret-down"></i>
+                    </div>
+                    <div class="toggle">
+                        <i class="fas fa-moon toggle-icon"></i>
+                        <i class="fas fa-sun toggle-icon"></i>
+                        <div class="toggle-ball"></div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="sidebar">
-        <i class="left-menu-icon fas fa-search" id="searchIcon"></i>
-        <i class="left-menu-icon fas fa-home"></i>
-        <i class="left-menu-icon fas fa-users"></i>
-        <i class="left-menu-icon fas fa-bookmark"></i>
-        <i class="left-menu-icon fas fa-tv"></i>
-        <i class="left-menu-icon fas fa-hourglass-start"></i>
-        <i class="left-menu-icon fas fa-shopping-cart"></i>
-    </div>
-    <div class="container">
-        <div class="content-container">
-            <div class="featured-content"
-                style="background: linear-gradient(to bottom, rgba(0,0,0,0), #151515), url('img/f-1.jpg');">
-                <img class="featured-title" src="img/f-t-1.png" alt="">
-                <p class="featured-desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto illo dolor
-                    deserunt nam assumenda ipsa eligendi dolore, ipsum id fugiat quo enim impedit, laboriosam omnis
-                    minima voluptatibus incidunt. Accusamus, provident.</p>
-                <button class="featured-button">WATCH</button>
-            </div>
-            <div class="movie-list-container" id="Movies">
-                <h1 class="movie-list-title">NEW RELEASES</h1>
-                <div class="movie-list-wrapper">
-                    <div class="movie-list">
-                        <div class="movie-list-item">
-                            <img class="movie-list-item-img" src="https://image.tmdb.org/t/p/original/hZnnDjgdDwnMb9a7ILMgqHf68Aj.jpg" alt="">
-                            <span class="movie-list-item-title">Aquaman 2 </span>
-                            <p class="movie-list-item-desc">Watch <b>Aquaman and the lost kingdom</b> movie online</p>
-                            <button class="movie-list-item-button">Watch</button>
-                        </div>
-                        <div class="movie-list-item">
-                            <img class="movie-list-item-img" src="./img/Godzilla-New.jpg" alt="">
-                            <span class="movie-list-item-title">Godzilla x Kong</span>
-                            <p class="movie-list-item-desc">Watch <b>Godzilla x Kong: The New Empire</b> movie online</p>
-                            <button class="movie-list-item-button">Watch</button>
-                        </div>
-                        <div class="movie-list-item">
-                            <img class="movie-list-item-img" src="./img/Airbender.jpg" alt="">
-                            <span class="movie-list-item-title">The Last Airbender</span>
-                            <p class="movie-list-item-desc">The plot follows Aang, a young Avatar who must master all four elements of air, water, fire, and earth and restore balance to the world</p>
-                            <button class="movie-list-item-button">Watch</button>
-                        </div>
-                        <div class="movie-list-item">
-                            <img class="movie-list-item-img" src="img/4.jpg" alt="">
-                            <span class="movie-list-item-title">1917</span>
-                            <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-                                hic fugit similique accusantium.</p>
-                            <button class="movie-list-item-button">Watch</button>
-                        </div>
-                        <div class="movie-list-item">
-                            <img class="movie-list-item-img" src="img/5.jpg" alt="">
-                            <span class="movie-list-item-title">Avengers</span>
-                            <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-                                hic fugit similique accusantium.</p>
-                            <button class="movie-list-item-button">Watch</button>
-                        </div>
-                        <div class="movie-list-item">
-                            <img class="movie-list-item-img" src="img/6.jpg" alt="">
-                            <span class="movie-list-item-title">Her</span>
-                            <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-                                hic fugit similique accusantium.</p>
-                            <button class="movie-list-item-button">Watch</button>
-                        </div>
-                        <div class="movie-list-item">
-                            <img class="movie-list-item-img" src="img/7.jpg" alt="">
-                            <span class="movie-list-item-title">Her</span>
-                            <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-                                hic fugit similique accusantium.</p>
-                            <button class="movie-list-item-button">Watch</button>
-                        </div>
-                    </div>
-                    <i class="fas fa-chevron-right arrow"></i>
+        <div class="sidebar">
+            <i class="left-menu-icon fas fa-search" id="searchIcon"></i>
+            <i class="left-menu-icon fas fa-home"></i>
+            <i class="left-menu-icon fas fa-users"></i>
+            <i class="left-menu-icon fas fa-bookmark"></i>
+            <i class="left-menu-icon fas fa-tv"></i>
+            <i class="left-menu-icon fas fa-hourglass-start"></i>
+            <i class="left-menu-icon fas fa-shopping-cart"></i>
+        </div>
+        <div class="container">
+            <div class="content-container">
+                <div class="featured-content"
+                    style="background: linear-gradient(to bottom, rgba(0,0,0,0), #151515), url('img/f-1.jpg');">
+                    <img class="featured-title" src="img/f-t-1.png" alt="">
+                    <p class="featured-desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto illo dolor
+                        deserunt nam assumenda ipsa eligendi dolore, ipsum id fugiat quo enim impedit, laboriosam omnis
+                        minima voluptatibus incidunt. Accusamus, provident.</p>
+                    <button class="featured-button">WATCH</button>
                 </div>
-            </div>
+                <div class="movie-list-container" id="Movies">
+                    <h1 class="movie-list-title">NEW RELEASES</h1>
+                    <div class="movie-list-wrapper">
+                        <div class="movie-list">
+                            <div class="movie-list-item">
+                                <img class="movie-list-item-img" src="https://image.tmdb.org/t/p/original/hZnnDjgdDwnMb9a7ILMgqHf68Aj.jpg" alt="">
+                                <span class="movie-list-item-title">Aquaman 2 </span>
+                                <p class="movie-list-item-desc">Watch <b>Aquaman and the lost kingdom</b> movie online</p>
+                                <button class="movie-list-item-button">Watch</button>
+                            </div>
+                            <div class="movie-list-item">
+                                <img class="movie-list-item-img" src="./img/Godzilla-New.jpg" alt="">
+                                <span class="movie-list-item-title">Godzilla x Kong</span>
+                                <p class="movie-list-item-desc">Watch <b>Godzilla x Kong: The New Empire</b> movie online</p>
+                                <button class="movie-list-item-button">Watch</button>
+                            </div>
+                            <div class="movie-list-item">
+                                <img class="movie-list-item-img" src="./img/Airbender.jpg" alt="">
+                                <span class="movie-list-item-title">The Last Airbender</span>
+                                <p class="movie-list-item-desc">The plot follows Aang, a young Avatar who must master all four elements of air, water, fire, and earth and restore balance to the world</p>
+                                <button class="movie-list-item-button">Watch</button>
+                            </div>
+                            <div class="movie-list-item">
+                                <img class="movie-list-item-img" src="img/4.jpg" alt="">
+                                <span class="movie-list-item-title">1917</span>
+                                <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+                                    hic fugit similique accusantium.</p>
+                                <button class="movie-list-item-button">Watch</button>
+                            </div>
+                            <div class="movie-list-item">
+                                <img class="movie-list-item-img" src="img/5.jpg" alt="">
+                                <span class="movie-list-item-title">Avengers</span>
+                                <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+                                    hic fugit similique accusantium.</p>
+                                <button class="movie-list-item-button">Watch</button>
+                            </div>
+                            <div class="movie-list-item">
+                                <img class="movie-list-item-img" src="img/6.jpg" alt="">
+                                <span class="movie-list-item-title">Her</span>
+                                <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+                                    hic fugit similique accusantium.</p>
+                                <button class="movie-list-item-button">Watch</button>
+                            </div>
+                            <div class="movie-list-item">
+                                <img class="movie-list-item-img" src="img/7.jpg" alt="">
+                                <span class="movie-list-item-title">Her</span>
+                                <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+                                    hic fugit similique accusantium.</p>
+                                <button class="movie-list-item-button">Watch</button>
+                            </div>
+                        </div>
+                        <i class="fas fa-chevron-right arrow"></i>
+                    </div>
+                </div>
 
-            <div class="movie-list-container">
-                <h1 class="movie-list-title">Sci-Fi Movies</h1>
-                <div class="movie-list-wrapper">
-                    <div class="movie-list">
-                        <div class="movie-list-item">
-                            <img class="movie-list-item-img" src="https://rukminim2.flixcart.com/image/850/1000/l09w8sw0/poster/i/s/2/medium-movie-interstellar-hd-wallpaper-print-poster-print-poster-original-imagc3h7h9pe3cn4.jpeg?q=20&crop=false" alt="">
-                            <span class="movie-list-item-title">Interstellar</span>
-                            <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-                                hic fugit similique accusantium.</p>
-                            <button class="movie-list-item-button">Watch</button>
-                        </div>
-                        <div class="movie-list-item">
-                            <img class="movie-list-item-img" src="img/9.jpg" alt="">
-                            <span class="movie-list-item-title">Hobbit</span>
-                            <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-                                hic fugit similique accusantium.</p>
-                            <button class="movie-list-item-button">Watch</button>
-                        </div>
-                        <div class="movie-list-item">
-                            <img class="movie-list-item-img" src="img/10.jpg" alt="">
-                            <span class="movie-list-item-title">Due Date</span>
-                            <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-                                hic fugit similique accusantium.</p>
-                            <button class="movie-list-item-button">Watch</button>
-                        </div>
-                        <div class="movie-list-item">
-                            <img class="movie-list-item-img" src="./img/annihilation.jpeg" alt="">
-                            <span class="movie-list-item-title">Annihilation</span>
-                            <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-                                hic fugit similique accusantium.</p>
-                            <button class="movie-list-item-button">Watch</button>
-                        </div>
-                        <div class="movie-list-item">
-                            <img class="movie-list-item-img" src="img/8.jpg" alt="">
-                            <span class="movie-list-item-title">Oblivion</span>
-                            <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-                                hic fugit similique accusantium.</p>
-                            <button class="movie-list-item-button">Watch</button>
-                           
-                        </div>
-                        <div class="movie-list-item">
-                            <img class="movie-list-item-img" src="https://rukminim2.flixcart.com/image/850/1000/kt0enww0/poster/a/9/z/medium-edge-of-tomorrow-tom-cruise-emily-blunt-movie-matte-original-imag6ghscggsdhng.jpeg?q=90&crop=false" alt="">
-                            <span class="movie-list-item-title">Edge of Tomorrow</span>
-                            <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-                                hic fugit similique accusantium.</p>
-                            <button class="movie-list-item-button">Watch</button>
-                        </div>
-                        <div class="movie-list-item">
-                            <img class="movie-list-item-img" src="./img/Avatar.jpg" alt="">
-                            <span class="movie-list-item-title">Her</span>
-                            <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-                                hic fugit similique accusantium.</p>
-                            <button class="movie-list-item-button">Watch</button>
-                        </div>
-                    </div>
-                    <i class="fas fa-chevron-right arrow"></i>
-                </div>
-            </div>
-            
-            <div class="featured-content" style="background: linear-gradient(to bottom, rgba(0,0,0,0),#151515),url('img/fvqCetJ\ \(1\).jpg');">
-                <img class="featured-title" src="./img/GDjZAFebUAASigc-removebg-preview.png" alt="">
-                <p class="featured-desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto illo dolor
-                    deserunt nam assumenda ipsa eligendi dolore, ipsum id fugiat quo enim impedit, laboriosam omnis
-                    minima voluptatibus incidunt. Accusamus, provident.</p>
-                <button class="featured-button">WATCH</button>
-            </div>
-            <div class="movie-list-container">
-                <h1 class="movie-list-title">BOLLYWOOD</h1>
-                <div class="movie-list-wrapper">
-                    <div class="movie-list">
-                        <div class="movie-list-item">
-                            <img class="movie-list-item-img" src="https://rukminim2.flixcart.com/image/850/1000/l2c753k0/poster/7/f/i/medium-kgf-chapter-2-movie-matte-finish-poster-posterclub50007-original-imagdpgqyhv6kmpv.jpeg?q=90&crop=false" alt="">
-                            <span class="movie-list-item-title">KGF</span>
-                            <p class="movie-list-item-desc"><b>KGF: Chapter 2</b> is a 2022 Indian Kannada-language period action film </p>
-                            <button class="movie-list-item-button">Watch</button>
-                        </div>
-                        <div class="movie-list-item">
-                            <img class="movie-list-item-img" src="https://img1.hotstarext.com/image/upload/f_auto,t_web_m_1x/sources/r1/cms/prod/436/1630436-h-18323ab5427d" alt="">
-                            <span class="movie-list-item-title">Vikram</span>
-                            <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-                                hic fugit similique accusantium.</p>
-                            <button class="movie-list-item-button">Watch</button>
-                        </div>
-                        <div class="movie-list-item">
-                            <img class="movie-list-item-img" src="https://rukminim2.flixcart.com/image/850/1000/kylvr0w0/poster/p/j/p/medium-allu-arjun-pushpa-movie-matte-finish-poster-original-imagasp9xe36zq29.jpeg?q=90&crop=false" alt="">
-                            <span class="movie-list-item-title">Pushpa</span>
-                            <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-                                hic fugit similique accusantium.</p>
-                            <button class="movie-list-item-button">Watch</button>
-                        </div>
-                        <div class="movie-list-item">
-                            <img class="movie-list-item-img" src="https://imagesvs.oneindia.com/img/2023/12/salaar-review2-1703184699.jpg" alt="">
-                            <span class="movie-list-item-title">Salaar</span>
-                            <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-                                hic fugit similique accusantium.</p>
-                            <button class="movie-list-item-button">Watch</button>
-                        </div>
-                        <div class="movie-list-item">
-                            <img class="movie-list-item-img" src="https://www.hindustantimes.com/ht-img/img/2024/04/06/1600x900/The-story-of--The-Kerala-Story--movie-revolves-aro_1683614819305_1712402664284.jpg" alt="">
-                            <span class="movie-list-item-title">The Kerala Story</span>
-                            <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-                                hic fugit similique accusantium.</p>
-                            <button class="movie-list-item-button">Watch</button>
-                        </div>
-                        <div class="movie-list-item">
-                            <img class="movie-list-item-img" src="https://assets-in.bmscdn.com/discovery-catalog/events/et00310760-cwbhwtzpeg-landscape.jpg" alt="">
-                            <span class="movie-list-item-title">Guntur kaaram</span>
-                            <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-                                hic fugit similique accusantium.</p>
-                            <button class="movie-list-item-button">Watch</button>
-                        </div>
-                        <div class="movie-list-item">
-                            <img class="movie-list-item-img" src="https://indianseries.in/wp-content/uploads/2024/03/Inspector-Rishi-Tamil-Series.jpg" alt="">
-                            <span class="movie-list-item-title">Inspector Rishi</span>
-                            <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-                                hic fugit similique accusantium.</p>
-                            <button class="movie-list-item-button">Watch</button>
+                <div class="movie-list-container">
+                    <h1 class="movie-list-title">Sci-Fi Movies</h1>
+                    <div class="movie-list-wrapper">
+                        <div class="movie-list">
+                            <div class="movie-list-item">
+                                <img class="movie-list-item-img" src="https://rukminim2.flixcart.com/image/850/1000/l09w8sw0/poster/i/s/2/medium-movie-interstellar-hd-wallpaper-print-poster-print-poster-original-imagc3h7h9pe3cn4.jpeg?q=20&crop=false" alt="">
+                                <span class="movie-list-item-title">Interstellar</span>
+                                <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+                                    hic fugit similique accusantium.</p>
+                                <button class="movie-list-item-button">Watch</button>
+                            </div>
+                            <div class="movie-list-item">
+                                <img class="movie-list-item-img" src="img/9.jpg" alt="">
+                                <span class="movie-list-item-title">Hobbit</span>
+                                <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+                                    hic fugit similique accusantium.</p>
+                                <button class="movie-list-item-button">Watch</button>
+                            </div>
+                            <div class="movie-list-item">
+                                <img class="movie-list-item-img" src="img/10.jpg" alt="">
+                                <span class="movie-list-item-title">Due Date</span>
+                                <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+                                    hic fugit similique accusantium.</p>
+                                <button class="movie-list-item-button">Watch</button>
+                            </div>
+                            <div class="movie-list-item">
+                                <img class="movie-list-item-img" src="./img/annihilation.jpeg" alt="">
+                                <span class="movie-list-item-title">Annihilation</span>
+                                <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+                                    hic fugit similique accusantium.</p>
+                                <button class="movie-list-item-button">Watch</button>
+                            </div>
+                            <div class="movie-list-item">
+                                <img class="movie-list-item-img" src="img/8.jpg" alt="">
+                                <span class="movie-list-item-title">Oblivion</span>
+                                <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+                                    hic fugit similique accusantium.</p>
+                                <button class="movie-list-item-button">Watch</button>
                             
+                            </div>
+                            <div class="movie-list-item">
+                                <img class="movie-list-item-img" src="https://rukminim2.flixcart.com/image/850/1000/kt0enww0/poster/a/9/z/medium-edge-of-tomorrow-tom-cruise-emily-blunt-movie-matte-original-imag6ghscggsdhng.jpeg?q=90&crop=false" alt="">
+                                <span class="movie-list-item-title">Edge of Tomorrow</span>
+                                <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+                                    hic fugit similique accusantium.</p>
+                                <button class="movie-list-item-button">Watch</button>
+                            </div>
+                            <div class="movie-list-item">
+                                <img class="movie-list-item-img" src="./img/Avatar.jpg" alt="">
+                                <span class="movie-list-item-title">Her</span>
+                                <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+                                    hic fugit similique accusantium.</p>
+                                <button class="movie-list-item-button">Watch</button>
+                            </div>
                         </div>
+                        <i class="fas fa-chevron-right arrow"></i>
                     </div>
-                    <i class="fas fa-chevron-right arrow"></i>
                 </div>
-            </div>
-            <div class="movie-list-container" id="web-series">
-                <h1 class="movie-list-title">Web-Series</h1>
-                <div class="movie-list-wrapper">
-                    <div class="movie-list">
-                        <div class="movie-list-item">
-                            <img class="movie-list-item-img" src="https://artworks.thetvdb.com/banners/v4/series/366972/posters/61940c9510021.jpg" alt="">
-                            <span class="movie-list-item-title">Foundation</span>
-                            <p class="movie-list-item-desc"><b>Foundation</b> is an American science fiction television series </p>
-                            <button class="movie-list-item-button">Watch</button>
+                
+                <div class="featured-content" style="background: linear-gradient(to bottom, rgba(0,0,0,0),#151515),url('img/fvqCetJ\ \(1\).jpg');">
+                    <img class="featured-title" src="./img/GDjZAFebUAASigc-removebg-preview.png" alt="">
+                    <p class="featured-desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto illo dolor
+                        deserunt nam assumenda ipsa eligendi dolore, ipsum id fugiat quo enim impedit, laboriosam omnis
+                        minima voluptatibus incidunt. Accusamus, provident.</p>
+                    <button class="featured-button">WATCH</button>
+                </div>
+                <div class="movie-list-container">
+                    <h1 class="movie-list-title">BOLLYWOOD</h1>
+                    <div class="movie-list-wrapper">
+                        <div class="movie-list">
+                            <div class="movie-list-item">
+                                <img class="movie-list-item-img" src="https://rukminim2.flixcart.com/image/850/1000/l2c753k0/poster/7/f/i/medium-kgf-chapter-2-movie-matte-finish-poster-posterclub50007-original-imagdpgqyhv6kmpv.jpeg?q=90&crop=false" alt="">
+                                <span class="movie-list-item-title">KGF</span>
+                                <p class="movie-list-item-desc"><b>KGF: Chapter 2</b> is a 2022 Indian Kannada-language period action film </p>
+                                <button class="movie-list-item-button">Watch</button>
+                            </div>
+                            <div class="movie-list-item">
+                                <img class="movie-list-item-img" src="https://img1.hotstarext.com/image/upload/f_auto,t_web_m_1x/sources/r1/cms/prod/436/1630436-h-18323ab5427d" alt="">
+                                <span class="movie-list-item-title">Vikram</span>
+                                <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+                                    hic fugit similique accusantium.</p>
+                                <button class="movie-list-item-button">Watch</button>
+                            </div>
+                            <div class="movie-list-item">
+                                <img class="movie-list-item-img" src="https://rukminim2.flixcart.com/image/850/1000/kylvr0w0/poster/p/j/p/medium-allu-arjun-pushpa-movie-matte-finish-poster-original-imagasp9xe36zq29.jpeg?q=90&crop=false" alt="">
+                                <span class="movie-list-item-title">Pushpa</span>
+                                <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+                                    hic fugit similique accusantium.</p>
+                                <button class="movie-list-item-button">Watch</button>
+                            </div>
+                            <div class="movie-list-item">
+                                <img class="movie-list-item-img" src="https://imagesvs.oneindia.com/img/2023/12/salaar-review2-1703184699.jpg" alt="">
+                                <span class="movie-list-item-title">Salaar</span>
+                                <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+                                    hic fugit similique accusantium.</p>
+                                <button class="movie-list-item-button">Watch</button>
+                            </div>
+                            <div class="movie-list-item">
+                                <img class="movie-list-item-img" src="https://www.hindustantimes.com/ht-img/img/2024/04/06/1600x900/The-story-of--The-Kerala-Story--movie-revolves-aro_1683614819305_1712402664284.jpg" alt="">
+                                <span class="movie-list-item-title">The Kerala Story</span>
+                                <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+                                    hic fugit similique accusantium.</p>
+                                <button class="movie-list-item-button">Watch</button>
+                            </div>
+                            <div class="movie-list-item">
+                                <img class="movie-list-item-img" src="https://assets-in.bmscdn.com/discovery-catalog/events/et00310760-cwbhwtzpeg-landscape.jpg" alt="">
+                                <span class="movie-list-item-title">Guntur kaaram</span>
+                                <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+                                    hic fugit similique accusantium.</p>
+                                <button class="movie-list-item-button">Watch</button>
+                            </div>
+                            <div class="movie-list-item">
+                                <img class="movie-list-item-img" src="https://indianseries.in/wp-content/uploads/2024/03/Inspector-Rishi-Tamil-Series.jpg" alt="">
+                                <span class="movie-list-item-title">Inspector Rishi</span>
+                                <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+                                    hic fugit similique accusantium.</p>
+                                <button class="movie-list-item-button">Watch</button>
+                                
+                            </div>
                         </div>
-                        <div class="movie-list-item">
-                            <img class="movie-list-item-img" src="https://m.media-amazon.com/images/S/pv-target-images/f1c2d22ffc0cb6e9bcdb142731bbc182763d8b820406a16269777bb6f1d4f0cc.jpg" alt="">
-                            <span class="movie-list-item-title">Lost in Space</span>
-                            <p class="movie-list-item-desc"><b>Lost in Space</b> is an American science fiction television series following the adventures of space.</p>
-                            <button class="movie-list-item-button">Watch</button>
-                        </div>
-                        <div class="movie-list-item">
-                            <img class="movie-list-item-img" src="https://static.tnn.in/thumb/msid-109241734,thumbsize-82280,width-1280,height-720,resizemode-75/109241734.jpg" alt="">
-                            <span class="movie-list-item-title">Monarch</span>
-                            <p class="movie-list-item-desc">Watch <b>Monarch: Legacy of Monsters</b> on Movies World</p>
-                            <button class="movie-list-item-button">Watch</button>
-                        </div>
-                        <div class="movie-list-item">
-                            <img class="movie-list-item-img" src="https://resizing.flixster.com/oYFbW_SSs11PWpt12I837ax4W8w=/fit-in/705x460/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p17650912_b_h10_ab.jpg" alt="">
-                            <span class="movie-list-item-title">Ragnarok</span>
-                            <p class="movie-list-item-desc"><b> Ragnarok </b>is a Norwegian fantasy drama television series reimagining of Norse mythology from Netflix</p>
-                            <button class="movie-list-item-button">Watch</button>
-                        </div>
-                        <div class="movie-list-item">
-                            <img class="movie-list-item-img" src="https://images.indianexpress.com/2023/12/Dhootha-review-01122023.jpg" alt="">
-                            <span class="movie-list-item-title">Dhootha</span>
-                            <p class="movie-list-item-desc"><b>Dhootha</b>is an Indian Telugu-language horror mystery thriller television series on created and directed by Vikram Kumar.</p>
-                            <button class="movie-list-item-button">Watch</button>
-                        </div>
-                        <div class="movie-list-item">
-                            <img class="movie-list-item-img" src="https://sadgeezer.com/wp-content/uploads/Witcher-Featured-Image.jpg" alt="">
-                            <span class="movie-list-item-title">The Witcher</span>
-                            <p class="movie-list-item-desc"><b>The Witcher</b> is a fantasy drama television series created by Lauren Schmidt Hissrich for Netflix.</p>
-                            <button class="movie-list-item-button">Watch</button>
-                        </div>
-                        <div class="movie-list-item">
-                            <img class="movie-list-item-img" src="https://m.media-amazon.com/images/M/MV5BNzgxOTc4ODctNDNhZC00M2UzLTgyYzgtM2Q2OTk3NmQ5NTljXkEyXkFqcGdeQXVyMzQ2MDI5NjU@._V1_FMjpg_UX1000_.jpg" alt="">
-                            <span class="movie-list-item-title">The Outsider</span>
-                            <p class="movie-list-item-desc"><b>The Outsider</b> is an American psychological thriller-horror crime drama television series</p>
-                            <button class="movie-list-item-button">Watch</button>
-                        </div>
+                        <i class="fas fa-chevron-right arrow"></i>
                     </div>
-                    <i class="fas fa-chevron-right arrow"></i>
+                </div>
+                <div class="movie-list-container" id="web-series">
+                    <h1 class="movie-list-title">Web-Series</h1>
+                    <div class="movie-list-wrapper">
+                        <div class="movie-list">
+                            <div class="movie-list-item">
+                                <img class="movie-list-item-img" src="https://artworks.thetvdb.com/banners/v4/series/366972/posters/61940c9510021.jpg" alt="">
+                                <span class="movie-list-item-title">Foundation</span>
+                                <p class="movie-list-item-desc"><b>Foundation</b> is an American science fiction television series </p>
+                                <button class="movie-list-item-button">Watch</button>
+                            </div>
+                            <div class="movie-list-item">
+                                <img class="movie-list-item-img" src="https://m.media-amazon.com/images/S/pv-target-images/f1c2d22ffc0cb6e9bcdb142731bbc182763d8b820406a16269777bb6f1d4f0cc.jpg" alt="">
+                                <span class="movie-list-item-title">Lost in Space</span>
+                                <p class="movie-list-item-desc"><b>Lost in Space</b> is an American science fiction television series following the adventures of space.</p>
+                                <button class="movie-list-item-button">Watch</button>
+                            </div>
+                            <div class="movie-list-item">
+                                <img class="movie-list-item-img" src="https://static.tnn.in/thumb/msid-109241734,thumbsize-82280,width-1280,height-720,resizemode-75/109241734.jpg" alt="">
+                                <span class="movie-list-item-title">Monarch</span>
+                                <p class="movie-list-item-desc">Watch <b>Monarch: Legacy of Monsters</b> on Movies World</p>
+                                <button class="movie-list-item-button">Watch</button>
+                            </div>
+                            <div class="movie-list-item">
+                                <img class="movie-list-item-img" src="https://resizing.flixster.com/oYFbW_SSs11PWpt12I837ax4W8w=/fit-in/705x460/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p17650912_b_h10_ab.jpg" alt="">
+                                <span class="movie-list-item-title">Ragnarok</span>
+                                <p class="movie-list-item-desc"><b> Ragnarok </b>is a Norwegian fantasy drama television series reimagining of Norse mythology from Netflix</p>
+                                <button class="movie-list-item-button">Watch</button>
+                            </div>
+                            <div class="movie-list-item">
+                                <img class="movie-list-item-img" src="https://images.indianexpress.com/2023/12/Dhootha-review-01122023.jpg" alt="">
+                                <span class="movie-list-item-title">Dhootha</span>
+                                <p class="movie-list-item-desc"><b>Dhootha</b>is an Indian Telugu-language horror mystery thriller television series on created and directed by Vikram Kumar.</p>
+                                <button class="movie-list-item-button">Watch</button>
+                            </div>
+                            <div class="movie-list-item">
+                                <img class="movie-list-item-img" src="https://sadgeezer.com/wp-content/uploads/Witcher-Featured-Image.jpg" alt="">
+                                <span class="movie-list-item-title">The Witcher</span>
+                                <p class="movie-list-item-desc"><b>The Witcher</b> is a fantasy drama television series created by Lauren Schmidt Hissrich for Netflix.</p>
+                                <button class="movie-list-item-button">Watch</button>
+                            </div>
+                            <div class="movie-list-item">
+                                <img class="movie-list-item-img" src="https://m.media-amazon.com/images/M/MV5BNzgxOTc4ODctNDNhZC00M2UzLTgyYzgtM2Q2OTk3NmQ5NTljXkEyXkFqcGdeQXVyMzQ2MDI5NjU@._V1_FMjpg_UX1000_.jpg" alt="">
+                                <span class="movie-list-item-title">The Outsider</span>
+                                <p class="movie-list-item-desc"><b>The Outsider</b> is an American psychological thriller-horror crime drama television series</p>
+                                <button class="movie-list-item-button">Watch</button>
+                            </div>
+                        </div>
+                        <i class="fas fa-chevron-right arrow"></i>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
     <script src="app.js"></script>
 </body>
 
